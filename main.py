@@ -53,6 +53,8 @@ def submit_textarea():
     requests.post(new_tx_address,json=post_object,headers={'Content-type': 'application/json'})
 
     return redirect('/')
-app.run(debug=True)
+
+app.run(debug=True, port=8000)
+
 
 
