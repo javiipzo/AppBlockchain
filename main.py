@@ -7,8 +7,8 @@ from flask_sqlalchemy import SQLAlchemy
 from psycopg2 import Timestamp
 import json
 import requests
-from Blockchain import Blockchain
-from Blockchain import Block
+from node_server import Blockchain
+from node_server import Block
 from PandaCoin import PandaCoin as pc
 from app import app
 CONNECTED_NODE_ADDRESS = "http://127.0.0.1:8000"
@@ -54,7 +54,7 @@ def submit_textarea():
 
     return redirect('/')
 
-app.run(debug=True, port=8000)
+
 
 
 
